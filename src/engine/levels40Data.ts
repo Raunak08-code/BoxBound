@@ -1,0 +1,832 @@
+import type { LevelDefinition } from './types.ts';
+
+export const GENERATED_LEVELS_11_TO_50: LevelDefinition[] = [
+  {
+    "id": 11,
+    "name": "Corridor Twist",
+    "difficulty": "Medium",
+    "theme": "courtyard",
+    "hint": "Plan your crate order carefully so no box blocks a corridor you still need to cross.",
+    "optimalMoves": 34,
+    "difficultyScale": 1,
+    "isDifficultyStep": false,
+    "layout": [
+      "###########",
+      "#.$  # $ .#",
+      "# @     $ #",
+      "#  #   # $#",
+      "#    #  ..#",
+      "#  #   #  #",
+      "#         #",
+      "###########"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Stone Gallery",
+    "difficulty": "Medium",
+    "theme": "courtyard",
+    "hint": "Plan your crate order carefully so no box blocks a corridor you still need to cross.",
+    "optimalMoves": 42,
+    "difficultyScale": 1,
+    "isDifficultyStep": false,
+    "layout": [
+      "##########",
+      "#.  ##   #",
+      "# $      #",
+      "#  #  #  #",
+      "# @$.. . #",
+      "#$ #$ #  #",
+      "#        #",
+      "##########"
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Twin Alcoves",
+    "difficulty": "Medium",
+    "theme": "timber",
+    "hint": "Plan your crate order carefully so no box blocks a corridor you still need to cross.",
+    "optimalMoves": 35,
+    "difficultyScale": 1,
+    "isDifficultyStep": false,
+    "layout": [
+      "##########",
+      "# $.##   #",
+      "#   +$.  #",
+      "#  #  #  #",
+      "#        #",
+      "#  #$ #  #",
+      "#     .$ #",
+      "##########"
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Iron Foundry",
+    "difficulty": "Medium",
+    "theme": "timber",
+    "hint": "Plan your crate order carefully so no box blocks a corridor you still need to cross.",
+    "optimalMoves": 42,
+    "difficultyScale": 1,
+    "isDifficultyStep": false,
+    "layout": [
+      "###########",
+      "#    #    #",
+      "# .       #",
+      "#  # $+#  #",
+      "# $  #$   #",
+      "#  #  .#  #",
+      "# $  .    #",
+      "###########"
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Lantern Crossing",
+    "difficulty": "Medium",
+    "theme": "conservatory",
+    "hint": "Plan your crate order carefully so no box blocks a corridor you still need to cross.",
+    "optimalMoves": 38,
+    "difficultyScale": 1,
+    "isDifficultyStep": false,
+    "layout": [
+      "###########",
+      "#    #    #",
+      "#$  @ .   #",
+      "#  #   #  #",
+      "#.   #  . #",
+      "#  #.$$#$ #",
+      "#         #",
+      "###########"
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Sunken Vault",
+    "difficulty": "Medium",
+    "theme": "conservatory",
+    "hint": "Plan your crate order carefully so no box blocks a corridor you still need to cross.",
+    "optimalMoves": 43,
+    "difficultyScale": 1,
+    "isDifficultyStep": false,
+    "layout": [
+      "###########",
+      "#   # .   #",
+      "# $       #",
+      "# ## #.## #",
+      "#         #",
+      "# .#  $#  #",
+      "#  @$ $.  #",
+      "#     #   #",
+      "###########"
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Amber Passage",
+    "difficulty": "Hard",
+    "theme": "quarry",
+    "hint": "Plan your crate order carefully so no box blocks a corridor you still need to cross.",
+    "optimalMoves": 42,
+    "difficultyScale": 1,
+    "isDifficultyStep": false,
+    "layout": [
+      "##########",
+      "#   ##.  #",
+      "#$      .#",
+      "#  #  #  #",
+      "#    .   #",
+      "#.@# $#$$#",
+      "#        #",
+      "##########"
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Mossy Pillar",
+    "difficulty": "Hard",
+    "theme": "quarry",
+    "hint": "Plan your crate order carefully so no box blocks a corridor you still need to cross.",
+    "optimalMoves": 41,
+    "difficultyScale": 1,
+    "isDifficultyStep": false,
+    "layout": [
+      "###########",
+      "#  @ #    #",
+      "# . $   . #",
+      "# $#   # .#",
+      "#    #.$  #",
+      "#  #   # $#",
+      "#         #",
+      "###########"
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Quarry Gate",
+    "difficulty": "Hard",
+    "theme": "vault",
+    "hint": "Plan your crate order carefully so no box blocks a corridor you still need to cross.",
+    "optimalMoves": 46,
+    "difficultyScale": 1,
+    "isDifficultyStep": false,
+    "layout": [
+      "###########",
+      "# @ #     #",
+      "# $       #",
+      "# ##$# ##.#",
+      "#         #",
+      "#  #   #  #",
+      "#. $      #",
+      "#   . # $.#",
+      "###########"
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Clockwork Hall",
+    "difficulty": "Hard",
+    "theme": "vault",
+    "hint": "Plan your crate order carefully so no box blocks a corridor you still need to cross.",
+    "optimalMoves": 45,
+    "difficultyScale": 1,
+    "isDifficultyStep": false,
+    "layout": [
+      "##########",
+      "#.  ## @ #",
+      "#   .  $ #",
+      "#  #  #. #",
+      "#        #",
+      "#$ #  #$ #",
+      "#     .$ #",
+      "##########"
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Ridge Switch",
+    "difficulty": "Hard",
+    "theme": "courtyard",
+    "hint": "Plan your crate order carefully so no box blocks a corridor you still need to cross.",
+    "optimalMoves": 50,
+    "difficultyScale": 1,
+    "isDifficultyStep": false,
+    "layout": [
+      "###########",
+      "#.   #   .#",
+      "#$$    . $#",
+      "#@ #.$ #  #",
+      "#    #    #",
+      "#  #   #  #",
+      "#         #",
+      "###########"
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Echo Chamber",
+    "difficulty": "Hard",
+    "theme": "courtyard",
+    "hint": "Plan your crate order carefully so no box blocks a corridor you still need to cross.",
+    "optimalMoves": 44,
+    "difficultyScale": 1,
+    "isDifficultyStep": false,
+    "layout": [
+      "###########",
+      "#   #    @#",
+      "#.      $$#",
+      "# ## # ##.#",
+      "#         #",
+      "#  #   #$$#",
+      "#         #",
+      "#   . #  .#",
+      "###########"
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Spiral Depot",
+    "difficulty": "Hard",
+    "theme": "timber",
+    "hint": "Plan your crate order carefully so no box blocks a corridor you still need to cross.",
+    "optimalMoves": 61,
+    "difficultyScale": 1.2,
+    "isDifficultyStep": true,
+    "layout": [
+      "###########",
+      "# . .#    #",
+      "#@      $ #",
+      "#. #   #  #",
+      "#    # .  #",
+      "#$$# $ #  #",
+      "#         #",
+      "###########"
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Frost Spire",
+    "difficulty": "Hard",
+    "theme": "timber",
+    "hint": "Plan your crate order carefully so no box blocks a corridor you still need to cross.",
+    "optimalMoves": 60,
+    "difficultyScale": 1.2,
+    "isDifficultyStep": false,
+    "layout": [
+      "###########",
+      "#+   #. . #",
+      "#$   .  $ #",
+      "#  #  $#  #",
+      "#    #    #",
+      "# $#   #  #",
+      "#         #",
+      "###########"
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Granite Yard",
+    "difficulty": "Hard",
+    "theme": "conservatory",
+    "hint": "Plan your crate order carefully so no box blocks a corridor you still need to cross.",
+    "optimalMoves": 63,
+    "difficultyScale": 1.2,
+    "isDifficultyStep": false,
+    "layout": [
+      "###########",
+      "#   .#    #",
+      "# $ $ +   #",
+      "#  #  $#  #",
+      "#    # $ .#",
+      "#  #   #  #",
+      "#     .   #",
+      "###########"
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Shadow Ledge",
+    "difficulty": "Hard",
+    "theme": "conservatory",
+    "hint": "Plan your crate order carefully so no box blocks a corridor you still need to cross.",
+    "optimalMoves": 63,
+    "difficultyScale": 1.44,
+    "isDifficultyStep": true,
+    "layout": [
+      "###########",
+      "#   #.$   #",
+      "#         #",
+      "# ## # ## #",
+      "#    @ .  #",
+      "#  #   #$ #",
+      "#.      $ #",
+      "#     # $.#",
+      "###########"
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Vaulted Bridge",
+    "difficulty": "Hard",
+    "theme": "quarry",
+    "hint": "Plan your crate order carefully so no box blocks a corridor you still need to cross.",
+    "optimalMoves": 74,
+    "difficultyScale": 1.44,
+    "isDifficultyStep": false,
+    "layout": [
+      "###########",
+      "# $.# .   #",
+      "# $       #",
+      "# ## # ## #",
+      "#   .     #",
+      "#  #   #  #",
+      "#      $$ #",
+      "#     # .@#",
+      "###########"
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Copper Lock",
+    "difficulty": "Hard",
+    "theme": "quarry",
+    "hint": "Plan your crate order carefully so no box blocks a corridor you still need to cross.",
+    "optimalMoves": 67,
+    "difficultyScale": 1.44,
+    "isDifficultyStep": false,
+    "layout": [
+      "###########",
+      "# $.#   . #",
+      "#         #",
+      "# ## # ## #",
+      "#         #",
+      "#  #   #$ #",
+      "# $ @$    #",
+      "#    .# . #",
+      "###########"
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Starlit Atrium",
+    "difficulty": "Master",
+    "theme": "vault",
+    "hint": "Plan your crate order carefully so no box blocks a corridor you still need to cross.",
+    "optimalMoves": 79,
+    "difficultyScale": 1.73,
+    "isDifficultyStep": true,
+    "layout": [
+      "#############",
+      "#   #   #   #",
+      "#       .   #",
+      "# #   #   # #",
+      "# $         #",
+      "# #  ###  # #",
+      "#       . $ #",
+      "# .$@ # . $ #",
+      "#############"
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Deep Cistern",
+    "difficulty": "Master",
+    "theme": "vault",
+    "hint": "Plan your crate order carefully so no box blocks a corridor you still need to cross.",
+    "optimalMoves": 82,
+    "difficultyScale": 1.73,
+    "isDifficultyStep": false,
+    "layout": [
+      "############",
+      "#  #    #  #",
+      "#   .    $ #",
+      "#   #  #.$@#",
+      "#        . #",
+      "#. ##  ##  #",
+      "#       $$ #",
+      "#     #    #",
+      "############"
+    ]
+  },
+  {
+    "id": 31,
+    "name": "Obsidian Arch",
+    "difficulty": "Master",
+    "theme": "courtyard",
+    "hint": "Stage the 5 crates in open lanes before committing any into side alcoves.",
+    "optimalMoves": 79,
+    "difficultyScale": 1.73,
+    "isDifficultyStep": false,
+    "layout": [
+      "############",
+      "# @  ##  . #",
+      "# $        #",
+      "# .#    #  #",
+      "# $. ##  $ #",
+      "#  #    #. #",
+      "# $ $      #",
+      "# .  ##    #",
+      "############"
+    ]
+  },
+  {
+    "id": 32,
+    "name": "Sunstone Ring",
+    "difficulty": "Master",
+    "theme": "courtyard",
+    "hint": "Stage the 5 crates in open lanes before committing any into side alcoves.",
+    "optimalMoves": 87,
+    "difficultyScale": 2.07,
+    "isDifficultyStep": true,
+    "layout": [
+      "############",
+      "#  # $. #  #",
+      "# . $.     #",
+      "#   #  #   #",
+      "# $      @ #",
+      "#  ##  ##  #",
+      "# $     .$ #",
+      "#    .#    #",
+      "############"
+    ]
+  },
+  {
+    "id": 33,
+    "name": "Iron Crossroads",
+    "difficulty": "Master",
+    "theme": "timber",
+    "hint": "Stage the 5 crates in open lanes before committing any into side alcoves.",
+    "optimalMoves": 94,
+    "difficultyScale": 2.07,
+    "isDifficultyStep": false,
+    "layout": [
+      "############",
+      "#  #    #  #",
+      "#  .  .  $ #",
+      "# $ #  #   #",
+      "# $ $ ..   #",
+      "#  ##  ##@ #",
+      "#  .$      #",
+      "#     #    #",
+      "############"
+    ]
+  },
+  {
+    "id": 34,
+    "name": "Bramble Court",
+    "difficulty": "Master",
+    "theme": "timber",
+    "hint": "Stage the 5 crates in open lanes before committing any into side alcoves.",
+    "optimalMoves": 122,
+    "difficultyScale": 2.07,
+    "isDifficultyStep": false,
+    "layout": [
+      "############",
+      "#  #   .#  #",
+      "#. $       #",
+      "#$$.#  #  .#",
+      "#@.      $ #",
+      "#  ##  ##  #",
+      "# $        #",
+      "#     #    #",
+      "############"
+    ]
+  },
+  {
+    "id": 35,
+    "name": "Looming Keep",
+    "difficulty": "Master",
+    "theme": "conservatory",
+    "hint": "Stage the 5 crates in open lanes before committing any into side alcoves.",
+    "optimalMoves": 152,
+    "difficultyScale": 2.49,
+    "isDifficultyStep": true,
+    "layout": [
+      "############",
+      "#  #.$@ #  #",
+      "#          #",
+      "#   #  #   #",
+      "# $        #",
+      "#  ##  ##$ #",
+      "#.$ .   .  #",
+      "#     #.$  #",
+      "############"
+    ]
+  },
+  {
+    "id": 36,
+    "name": "Crimson Dock",
+    "difficulty": "Master",
+    "theme": "conservatory",
+    "hint": "Stage the 6 crates in open lanes before committing any into side alcoves.",
+    "optimalMoves": 111,
+    "difficultyScale": 2.49,
+    "isDifficultyStep": false,
+    "layout": [
+      "#############",
+      "# $.#   #   #",
+      "# $         #",
+      "# #   #   # #",
+      "# $  ...  $ #",
+      "# #  ### @# #",
+      "# $  .      #",
+      "#     # . $ #",
+      "#############"
+    ]
+  },
+  {
+    "id": 37,
+    "name": "Slate Labyrinth",
+    "difficulty": "Master",
+    "theme": "quarry",
+    "hint": "Stage the 6 crates in open lanes before committing any into side alcoves.",
+    "optimalMoves": 114,
+    "difficultyScale": 2.49,
+    "isDifficultyStep": false,
+    "layout": [
+      "############",
+      "#  #   @# .#",
+      "#    .$$ $ #",
+      "#   #  #   #",
+      "#  .   $ . #",
+      "# .## .##  #",
+      "# $      $ #",
+      "#     #    #",
+      "############"
+    ]
+  },
+  {
+    "id": 38,
+    "name": "Prism Wing",
+    "difficulty": "Master",
+    "theme": "quarry",
+    "hint": "Stage the 6 crates in open lanes before committing any into side alcoves.",
+    "optimalMoves": 134,
+    "difficultyScale": 2.99,
+    "isDifficultyStep": true,
+    "layout": [
+      "#############",
+      "#  .#   #   #",
+      "# $        .#",
+      "# #.  # $ # #",
+      "#     ... $ #",
+      "# #  ###  # #",
+      "#@  $  $ $  #",
+      "#     #     #",
+      "#############"
+    ]
+  },
+  {
+    "id": 39,
+    "name": "Shattered Hall",
+    "difficulty": "Master",
+    "theme": "vault",
+    "hint": "Stage the 6 crates in open lanes before committing any into side alcoves.",
+    "optimalMoves": 135,
+    "difficultyScale": 2.99,
+    "isDifficultyStep": false,
+    "layout": [
+      "############",
+      "#    ##    #",
+      "#   $  $@$ #",
+      "#  #    #  #",
+      "#   .##. $ #",
+      "#. #    #  #",
+      "#  .  .$ $ #",
+      "#    ## .  #",
+      "############"
+    ]
+  },
+  {
+    "id": 40,
+    "name": "Titan Storage",
+    "difficulty": "Master",
+    "theme": "vault",
+    "hint": "Stage the 6 crates in open lanes before committing any into side alcoves.",
+    "optimalMoves": 137,
+    "difficultyScale": 2.99,
+    "isDifficultyStep": false,
+    "layout": [
+      "############",
+      "#    ##    #",
+      "#  . @$.   #",
+      "#  #    #  #",
+      "# $$.## $. #",
+      "# .# .$ #  #",
+      "#        $ #",
+      "#    ##    #",
+      "############"
+    ]
+  },
+  {
+    "id": 41,
+    "name": "Cobalt Nexus",
+    "difficulty": "Apex",
+    "theme": "courtyard",
+    "hint": "Work from the inner targets outward across 7 crates; use the outer ring to swap lanes.",
+    "optimalMoves": 114,
+    "difficultyScale": 3.58,
+    "isDifficultyStep": true,
+    "layout": [
+      "############",
+      "# $..##    #",
+      "#  $   .   #",
+      "#  # .$ #  #",
+      "# @  ##    #",
+      "# $#    #  #",
+      "# . $    $ #",
+      "#   .##  $.#",
+      "############"
+    ]
+  },
+  {
+    "id": 42,
+    "name": "Gilded Passage",
+    "difficulty": "Apex",
+    "theme": "courtyard",
+    "hint": "Work from the inner targets outward across 7 crates; use the outer ring to swap lanes.",
+    "optimalMoves": 188,
+    "difficultyScale": 3.58,
+    "isDifficultyStep": false,
+    "layout": [
+      "#############",
+      "#  .#   #  .#",
+      "# $       . #",
+      "# #   #   # #",
+      "#         $ #",
+      "# #  ###. # #",
+      "#.$ $.@$. $$#",
+      "#     #     #",
+      "#############"
+    ]
+  },
+  {
+    "id": 43,
+    "name": "Basalt Core",
+    "difficulty": "Apex",
+    "theme": "timber",
+    "hint": "Work from the inner targets outward across 7 crates; use the outer ring to swap lanes.",
+    "optimalMoves": 173,
+    "difficultyScale": 3.58,
+    "isDifficultyStep": false,
+    "layout": [
+      "############",
+      "#  #    #  #",
+      "# $ . $.*  #",
+      "#   #..#   #",
+      "#         .#",
+      "#  ## $##  #",
+      "#      $ $*#",
+      "#     #  @ #",
+      "############"
+    ]
+  },
+  {
+    "id": 44,
+    "name": "Ember Sanctum",
+    "difficulty": "Apex",
+    "theme": "timber",
+    "hint": "Work from the inner targets outward across 7 crates; use the outer ring to swap lanes.",
+    "optimalMoves": 186,
+    "difficultyScale": 4.3,
+    "isDifficultyStep": true,
+    "layout": [
+      "############",
+      "#.*#    #  #",
+      "#    . .   #",
+      "#   # .#.  #",
+      "# $        #",
+      "# .## $##$ #",
+      "#$$    $  @#",
+      "#     #    #",
+      "############"
+    ]
+  },
+  {
+    "id": 45,
+    "name": "Tidal Lock",
+    "difficulty": "Apex",
+    "theme": "conservatory",
+    "hint": "Work from the inner targets outward across 7 crates; use the outer ring to swap lanes.",
+    "optimalMoves": 182,
+    "difficultyScale": 4.3,
+    "isDifficultyStep": false,
+    "layout": [
+      "#############",
+      "#.$ #   #   #",
+      "# $   .  . .#",
+      "# #   # . # #",
+      "# $  . @$.  #",
+      "# #  ###  # #",
+      "# $     $ $ #",
+      "#     #     #",
+      "#############"
+    ]
+  },
+  {
+    "id": 46,
+    "name": "Aether Bay",
+    "difficulty": "Apex",
+    "theme": "conservatory",
+    "hint": "Work from the inner targets outward across 8 crates; use the outer ring to swap lanes.",
+    "optimalMoves": 149,
+    "difficultyScale": 4.3,
+    "isDifficultyStep": false,
+    "layout": [
+      "#############",
+      "#   #.  #   #",
+      "#   $ $.    #",
+      "# #   #   # #",
+      "#   .. . $  #",
+      "# #  ###. # #",
+      "# $$$   $   #",
+      "#.    # @$. #",
+      "#############"
+    ]
+  },
+  {
+    "id": 47,
+    "name": "Monolith Yard",
+    "difficulty": "Apex",
+    "theme": "quarry",
+    "hint": "Work from the inner targets outward across 8 crates; use the outer ring to swap lanes.",
+    "optimalMoves": 165,
+    "difficultyScale": 5.16,
+    "isDifficultyStep": true,
+    "layout": [
+      "############",
+      "#.$  ##  $.#",
+      "# .      $ #",
+      "# $#    #. #",
+      "# .  ##  . #",
+      "# $#    #  #",
+      "# $      $ #",
+      "# .$ ## .@ #",
+      "############"
+    ]
+  },
+  {
+    "id": 48,
+    "name": "Crown Chamber",
+    "difficulty": "Apex",
+    "theme": "quarry",
+    "hint": "Work from the inner targets outward across 8 crates; use the outer ring to swap lanes.",
+    "optimalMoves": 213,
+    "difficultyScale": 5.16,
+    "isDifficultyStep": false,
+    "layout": [
+      "############",
+      "#  #@$ .#. #",
+      "# * $ $ .  #",
+      "#.  #. #   #",
+      "#.  $ .$   #",
+      "#  ##  ##  #",
+      "#      $ $ #",
+      "#     #    #",
+      "############"
+    ]
+  },
+  {
+    "id": 49,
+    "name": "Apex Corridor",
+    "difficulty": "Apex",
+    "theme": "vault",
+    "hint": "Work from the inner targets outward across 8 crates; use the outer ring to swap lanes.",
+    "optimalMoves": 252,
+    "difficultyScale": 5.16,
+    "isDifficultyStep": false,
+    "layout": [
+      "#############",
+      "# * # * #   #",
+      "# $   .     #",
+      "# #.  # $ #.#",
+      "# *  .   .  #",
+      "# #  ###  # #",
+      "#   $ $   $ #",
+      "#  @  #     #",
+      "#############"
+    ]
+  },
+  {
+    "id": 50,
+    "name": "Grand Citadel",
+    "difficulty": "Apex",
+    "theme": "vault",
+    "hint": "Work from the inner targets outward across 8 crates; use the outer ring to swap lanes.",
+    "optimalMoves": 256,
+    "difficultyScale": 6.19,
+    "isDifficultyStep": true,
+    "layout": [
+      "############",
+      "# $ .##@$. #",
+      "# .    $ $ #",
+      "#  #    #. #",
+      "#  $.## .  #",
+      "#  #    #. #",
+      "# $$ $  .  #",
+      "#    ##    #",
+      "############"
+    ]
+  }
+];

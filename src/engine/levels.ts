@@ -1,0 +1,301 @@
+import { GENERATED_LEVELS_11_TO_50 } from './levels40Data.ts';
+import type { LevelDefinition, LevelThemeId } from './types.ts';
+
+export interface LevelThemePalette {
+  id: LevelThemeId;
+  label: string;
+  floorA: string;
+  floorB: string;
+  floorBorder: string;
+  wallTop: string;
+  wallFace: string;
+  wallHighlight: string;
+  wallShadow: string;
+  targetGlow: string;
+  targetRing: string;
+  crateWood: string;
+  crateTrim: string;
+  crateLocked: string;
+  crateLockedTrim: string;
+  backdropGradient: string;
+}
+
+export const LEVEL_THEMES: Record<LevelThemeId, LevelThemePalette> = {
+  courtyard: {
+    id: 'courtyard',
+    label: 'Sunlit Courtyard',
+    floorA: '#2D3A4F',
+    floorB: '#273346',
+    floorBorder: '#1E293B',
+    wallTop: '#D99B52',
+    wallFace: '#9C622B',
+    wallHighlight: '#F3C07A',
+    wallShadow: '#5C3716',
+    targetGlow: '#10B981',
+    targetRing: '#6EE7B7',
+    crateWood: '#C97B3A',
+    crateTrim: '#8A4B1C',
+    crateLocked: '#10B981',
+    crateLockedTrim: '#047857',
+    backdropGradient: 'from-[#172033] via-[#1C2840] to-[#111827]',
+  },
+  timber: {
+    id: 'timber',
+    label: 'Timber Depot',
+    floorA: '#3B312B',
+    floorB: '#332A24',
+    floorBorder: '#241D18',
+    wallTop: '#B4693E',
+    wallFace: '#7C4323',
+    wallHighlight: '#DC9266',
+    wallShadow: '#4A2411',
+    targetGlow: '#F59E0B',
+    targetRing: '#FCD34D',
+    crateWood: '#D48C46',
+    crateTrim: '#8F5320',
+    crateLocked: '#F59E0B',
+    crateLockedTrim: '#B45309',
+    backdropGradient: 'from-[#1F1814] via-[#281E18] to-[#14100E]',
+  },
+  conservatory: {
+    id: 'conservatory',
+    label: 'Mossy Conservatory',
+    floorA: '#233D38',
+    floorB: '#1E3530',
+    floorBorder: '#162723',
+    wallTop: '#6B8E6E',
+    wallFace: '#436347',
+    wallHighlight: '#96B899',
+    wallShadow: '#263C29',
+    targetGlow: '#38BDF8',
+    targetRing: '#7DD3FC',
+    crateWood: '#C48144',
+    crateTrim: '#7D4A1F',
+    crateLocked: '#14B8A6',
+    crateLockedTrim: '#0F766E',
+    backdropGradient: 'from-[#11221F] via-[#162C28] to-[#0B1715]',
+  },
+  quarry: {
+    id: 'quarry',
+    label: 'Cobalt Quarry',
+    floorA: '#2B3548',
+    floorB: '#242D3E',
+    floorBorder: '#1A212E',
+    wallTop: '#64748B',
+    wallFace: '#475569',
+    wallHighlight: '#94A3B8',
+    wallShadow: '#1E293B',
+    targetGlow: '#FB923C',
+    targetRing: '#FDBA74',
+    crateWood: '#D9823B',
+    crateTrim: '#924D18',
+    crateLocked: '#22C55E',
+    crateLockedTrim: '#15803D',
+    backdropGradient: 'from-[#131B29] via-[#192336] to-[#0D131D]',
+  },
+  vault: {
+    id: 'vault',
+    label: 'Lantern Vault',
+    floorA: '#312A45',
+    floorB: '#2A233B',
+    floorBorder: '#1E192B',
+    wallTop: '#8B7BA8',
+    wallFace: '#5B4C75',
+    wallHighlight: '#B4A7CC',
+    wallShadow: '#342A47',
+    targetGlow: '#FBBF24',
+    targetRing: '#FDE68A',
+    crateWood: '#CF8441',
+    crateTrim: '#8A4E1E',
+    crateLocked: '#10B981',
+    crateLockedTrim: '#047857',
+    backdropGradient: 'from-[#181326] via-[#211A33] to-[#110D1B]',
+  },
+};
+
+export const INITIAL_LEVELS_1_TO_10: LevelDefinition[] = [
+  {
+    id: 1,
+    name: 'First Steps',
+    difficulty: 'Beginner',
+    theme: 'courtyard',
+    hint: 'Walk around the crate so you can push it down, then left onto the glowing pad.',
+    optimalMoves: 9,
+    layout: [
+      '########',
+      '#      #',
+      '# @  $ #',
+      '#   #  #',
+      '#   .  #',
+      '#      #',
+      '########',
+    ],
+  },
+  {
+    id: 2,
+    name: 'The First Push',
+    difficulty: 'Beginner',
+    theme: 'courtyard',
+    hint: 'Push the lower crate right into the alcove first so the upper crate has room to slide.',
+    optimalMoves: 13,
+    layout: [
+      '#########',
+      '#   #   #',
+      '# @ $   #',
+      '#   $ ..#',
+      '#   #   #',
+      '#########',
+    ],
+  },
+  {
+    id: 3,
+    name: 'Narrow Passage',
+    difficulty: 'Easy',
+    theme: 'timber',
+    hint: 'Send the upper crate across the bridge before pushing the lower crate up into the lane.',
+    optimalMoves: 11,
+    layout: [
+      '#########',
+      '#  #    #',
+      '# @$  . #',
+      '#  # ## #',
+      '#  $  . #',
+      '#       #',
+      '#########',
+    ],
+  },
+  {
+    id: 4,
+    name: 'Corner Trouble',
+    difficulty: 'Easy',
+    theme: 'timber',
+    hint: 'Never push a crate into a wall corner unless a target sits there. Use Undo if wedged.',
+    optimalMoves: 23,
+    layout: [
+      '#########',
+      '# .   . #',
+      '#  $ $  #',
+      '## # # ##',
+      '#  @ $  #',
+      '#    .  #',
+      '#       #',
+      '#########',
+    ],
+  },
+  {
+    id: 5,
+    name: 'The Crossroads',
+    difficulty: 'Medium',
+    theme: 'conservatory',
+    hint: 'Clear the center crate upward first so the side lanes stay open for maneuvering.',
+    optimalMoves: 28,
+    layout: [
+      '#########',
+      '#  ...  #',
+      '#  # #  #',
+      '# $ @ $ #',
+      '#   $   #',
+      '#  # #  #',
+      '#       #',
+      '#########',
+    ],
+  },
+  {
+    id: 6,
+    name: 'The Warehouse',
+    difficulty: 'Medium',
+    theme: 'conservatory',
+    hint: 'Thread crates one by one through the upper pillars—fill the center target before the sides.',
+    optimalMoves: 27,
+    layout: [
+      '#########',
+      '#  ...  #',
+      '# # # # #',
+      '#  $$$  #',
+      '#   @   #',
+      '#  $ .  #',
+      '#       #',
+      '#########',
+    ],
+  },
+  {
+    id: 7,
+    name: 'Tight Spaces',
+    difficulty: 'Hard',
+    theme: 'quarry',
+    hint: 'Pair each crate with the corner alcove on its side; keep the middle corridor clear.',
+    optimalMoves: 21,
+    layout: [
+      '#########',
+      '# .   . #',
+      '# #$ $# #',
+      '#   @   #',
+      '# #$ $# #',
+      '# .   . #',
+      '#########',
+    ],
+  },
+  {
+    id: 8,
+    name: 'Double Trouble',
+    difficulty: 'Hard',
+    theme: 'quarry',
+    hint: 'Route the bottom crate outward before locking the upper hallway.',
+    optimalMoves: 27,
+    layout: [
+      '#########',
+      '# .   . #',
+      '# $#$#$ #',
+      '#   @   #',
+      '#   $   #',
+      '#  . .  #',
+      '#       #',
+      '#########',
+    ],
+  },
+  {
+    id: 9,
+    name: 'The Challenge',
+    difficulty: 'Hard',
+    theme: 'vault',
+    hint: 'Use the right chamber as a staging loop to line up the top-left target pair.',
+    optimalMoves: 30,
+    layout: [
+      '##########',
+      '#  ..#   #',
+      '#  $.# $ #',
+      '#   $#   #',
+      '###  ##  #',
+      '# @ $  . #',
+      '#        #',
+      '##########',
+    ],
+  },
+  {
+    id: 10,
+    name: 'Master Puzzle',
+    difficulty: 'Master',
+    theme: 'vault',
+    hint: 'Stage crates along the central spine—every push affects the opposite alcove.',
+    optimalMoves: 32,
+    layout: [
+      '##########',
+      '# . #  . #',
+      '# $    $ #',
+      '## #  # ##',
+      '#  $  $  #',
+      '# . @  . #',
+      '#        #',
+      '##########',
+    ],
+  },
+];
+
+export const LEVELS: LevelDefinition[] = [
+  ...INITIAL_LEVELS_1_TO_10,
+  ...GENERATED_LEVELS_11_TO_50,
+];
+
+export function getLevelById(levelId: number): LevelDefinition {
+  return LEVELS.find((lvl) => lvl.id === levelId) ?? LEVELS[0];
+}

@@ -1,0 +1,6 @@
+{
+  "name": "BOXBOUND",
+  "description": "Built by DARR STUDIOS — A colourful modern pixel-art-inspired 2D top-down box-pushing puzzle game with 50 progressive levels, real-time timer, undo/restart mechanics, Web Audio synth, and verified global leaderboards.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

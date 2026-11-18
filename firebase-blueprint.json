@@ -1,0 +1,169 @@
+{
+  "entities": {
+    "PlayerProfile": {
+      "title": "PlayerProfile",
+      "description": "Public-safe player profile tracking display name and progression summary across 50 levels without PII.",
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "string",
+          "description": "Firebase Auth UID matching document ID.",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "username": {
+          "type": "string",
+          "description": "Player display name.",
+          "minLength": 1,
+          "maxLength": 32
+        },
+        "unlockedLevel": {
+          "type": "integer",
+          "description": "Highest unlocked level ID from 1 to 50."
+        },
+        "totalCompleted": {
+          "type": "integer",
+          "description": "Total completed levels count from 0 to 50."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": ["uid", "username", "unlockedLevel", "totalCompleted", "createdAt", "updatedAt"]
+    },
+    "LevelProgress": {
+      "title": "LevelProgress",
+      "description": "Per-player completion, best move count, and best completion time for a specific level.",
+      "type": "object",
+      "properties": {
+        "playerId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "levelId": {
+          "type": "integer"
+        },
+        "completed": {
+          "type": "boolean"
+        },
+        "bestMoves": {
+          "type": "integer"
+        },
+        "bestTimeMs": {
+          "type": "integer",
+          "description": "Fastest completion time in milliseconds."
+        },
+        "completedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": ["playerId", "levelId", "completed", "bestMoves", "completedAt"]
+    },
+    "GameSession": {
+      "title": "GameSession",
+      "description": "Individual level play session record tracking status, moves, and elapsed time.",
+      "type": "object",
+      "properties": {
+        "sessionId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "playerId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "levelId": {
+          "type": "integer"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["active", "completed", "abandoned"]
+        },
+        "moveCount": {
+          "type": "integer"
+        },
+        "elapsedMs": {
+          "type": "integer"
+        },
+        "startedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "completedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": ["sessionId", "playerId", "levelId", "status", "moveCount", "startedAt"]
+    },
+    "LeaderboardEntry": {
+      "title": "LeaderboardEntry",
+      "description": "Global leaderboard entry for a specific level with move-sequence proof and completion time.",
+      "type": "object",
+      "properties": {
+        "playerId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "username": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 32
+        },
+        "levelId": {
+          "type": "integer"
+        },
+        "bestMoves": {
+          "type": "integer"
+        },
+        "bestTimeMs": {
+          "type": "integer"
+        },
+        "verifiedMoves": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000,
+          "pattern": "^[UDLR]+$"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": ["playerId", "username", "levelId", "bestMoves", "verifiedMoves", "updatedAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": { "$ref": "#/entities/PlayerProfile" },
+      "description": "Authenticated player profile storing progression summary without PII."
+    },
+    "/users/{userId}/levels/{levelKey}": {
+      "schema": { "$ref": "#/entities/LevelProgress" },
+      "description": "Per-level completion, best move count, and best time record owned by userId."
+    },
+    "/users/{userId}/sessions/{sessionId}": {
+      "schema": { "$ref": "#/entities/GameSession" },
+      "description": "Level play sessions owned by userId."
+    },
+    "/leaderboard/{entryId}": {
+      "schema": { "$ref": "#/entities/LeaderboardEntry" },
+      "description": "Publicly readable per-level best move and time leaderboard entries keyed as {levelId}_{playerId}."
+    }
+  }
+}
